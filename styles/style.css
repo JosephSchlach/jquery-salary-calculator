@@ -1,0 +1,25 @@
+h2{
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #525252;
+   }
+   
+caption{
+    margin: 30px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #525252;
+}
+
+td {
+    height: 20px;
+    vertical-align: center;
+  }
+
+tr:nth-child(even) {
+    background-color: #cecece;
+}
+
+#deletebutton{
+    margin: 20px;
+}
