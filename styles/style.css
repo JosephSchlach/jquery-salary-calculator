@@ -1,25 +1,36 @@
+/* Text */
 h2{
-    font-size: 30px;
+    
+    font-size: 25px;
     font-family: 'Roboto', sans-serif;
     color: #525252;
    }
-   
-caption{
-    margin: 30px;
-    font-size: 30px;
+
+h3{
+    
+    font-size: 35px;
     font-family: 'Roboto', sans-serif;
     color: #525252;
-}
+   }
 
-td {
-    height: 20px;
-    vertical-align: center;
-  }
 
+/* Table */
 tr:nth-child(even) {
     background-color: #cecece;
 }
 
-#deletebutton{
-    margin: 20px;
+th{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #525252;
 }
+
+
+/* Buttons */
+#addEmployeeButton{
+    margin: 5px;
+}
+#deletebutton{
+    margin: 10px;
+}
+

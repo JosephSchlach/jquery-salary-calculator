@@ -7,16 +7,6 @@ function readyNow(){
     $( '#addEmployeeButton' ).on( 'click', addEmployee )
 } // end ready now
 
-class Employee{
-    constructor( firstName, lastName, id, title, salary, ){
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.id = id;
-      this.title = title;
-      this.id = salary;
-    } //end constructor
-  } // end Car class
-
 function addEmployee(){
     console.log( 'in addStaff' );
     let newEmployee = {
@@ -37,8 +27,13 @@ function addEmployee(){
     let el = $( '#staffOut' );
     el.empty();
      // loop staff
-  for( let item of staff ){
-     // for each item, create a new <li> in inventoryOut
-    el.append( `<li>${ Employee.firstName } & ${ Employee.lastName } & ${ Employee.id } & ${ Employee.title } & ${ Employee.salary }</li>` );
+  for( let newEmployee of staff ){
+     // for each item, create a new <td></td> in inventoryOut
+    el.append( `<tr><td>${ newEmployee.firstName }</td><td>${ newEmployee.lastName }</td><td>${ newEmployee.id }</td><td>${ newEmployee.title }</td><td>${ newEmployee.salary }</td></tr>` );
+    $('#fNameIN').val('');
+    $('#lNameIN').val('');
+    $('#idIn').val('');
+    $('#titleIn').val('');
+    $('#salaryIn').val('');
     } // end loop
  } // display staff
