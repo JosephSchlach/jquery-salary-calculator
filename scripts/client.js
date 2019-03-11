@@ -1,11 +1,15 @@
 $( document ).ready( readyNow );
 console.log(`in JQuery`);
 let staff = [];
-//array
+let salaries = [];
+//arrays
 
 function readyNow(){
-    $( '#addEmployeeButton' ).on( 'click', addEmployee )
+    $( '#addEmployeeButton' ).on( 'click', addEmployee );
+    $( '#addEmployeeButton' ).on( 'click', addSalary );
+    $( '#deletebutton' ).on('click', removeEmployee );
 } // end ready now
+
 
 function addEmployee(){
     console.log( 'in addStaff' );
@@ -22,6 +26,18 @@ function addEmployee(){
     displayStaff();
 } // end add item
 
+
+function addSalary(){
+    let newSalary = {
+        salary: $( '#salaryIn' ).val(),
+    }
+ salaries.push( newSalary );
+ console.log( 'salaries:', salaries );
+ $('#salaryIn').val('');//clearing salary input field
+ salariesConvert();
+ }
+
+
  function displayStaff(){
     console.log( 'in displayStaff' );
     let el = $( '#staffOut' );
@@ -34,6 +50,30 @@ function addEmployee(){
     $('#lNameIN').val('');
     $('#idIn').val('');
     $('#titleIn').val('');
-    $('#salaryIn').val('');
+    // $('#salaryIn').val(''); //leaving input field for salaries array
     } // end loop
  } // display staff
+
+function removeEmployee(){
+        let el = $( '#staffOut' );
+        el.empty();
+        removeFromStaff();
+    }
+function removeFromStaff(){
+    staff.pop();
+}
+
+function salariesConvert(){
+    myJSON = JSON.stringify( salaries );
+    salariesMath();
+}
+
+ function salariesMath(){
+     console.log( 'in salariesMath' );
+     let tot = $( '#monthlyTotal' );
+     tot.empty();
+     accumulator = 0;
+     for(let i=[0]; i < salaries.length; i++) {
+     accumulator + salaries[i];
+     }
+ }

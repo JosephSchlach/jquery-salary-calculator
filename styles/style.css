@@ -15,6 +15,14 @@ h3{
 
 
 /* Table */
+table {
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: .5px solid black;
+  }
+
 tr:nth-child(even) {
     background-color: #cecece;
 }
@@ -30,7 +38,7 @@ th{
 #addEmployeeButton{
     margin: 5px;
 }
-#deletebutton{
+/* #deletebutton{
     margin: 10px;
-}
+} */
 
